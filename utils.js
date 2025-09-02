@@ -30,9 +30,9 @@ async function startGameVersion(version) {
 
   createUnityInstance(document.querySelector("#unity-canvas"), {
     arguments: [],
-    dataUrl: `builds/${version}/brackeys.data.gz`,
-    frameworkUrl: `builds/${version}/brackeys.framework.js.gz`,
-    codeUrl: `builds/${version}/brackeys.wasm.gz`,
+    dataUrl: `builds/${version}/brackeys.data`,
+    frameworkUrl: `builds/${version}/brackeys.framework.js`,
+    codeUrl: `builds/${version}/brackeys.wasm`,
     streamingAssetsUrl: "StreamingAssets",
     companyName: "TheNuclearNexus _ Jachro",
     productName: "Mages of Biscocta",
