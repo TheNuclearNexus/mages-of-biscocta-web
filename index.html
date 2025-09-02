@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Unity Web Player | Mages of Biscocta</title>
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.6/dist/htmx.min.js"></script>
+    <script src="./utils.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+20&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Jersey 20";
+        text-rendering: geometricPrecision;
+      }
+
+      :root {
+        --bg-color: #282856;
+      }
+
+      .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-direction: column;
+        color: white;
+
+        margin: auto;
+
+        width: 960px;
+        height: 540px;
+
+        background-color: var(--bg-color);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-weight: normal;
+        margin: 0;
+      }
+
+      em {
+        color: #ff3aeb;
+      }
+
+      button {
+        border: none;
+        background-image: url("./assets/button.png");
+        color: #1d1c4c;
+        width: 112px;
+        height: 32px;
+        image-rendering: pixelated;
+        background-color: transparent;
+      }
+
+      button:hover {
+        background-image: url("./assets/button_hover.png");
+        color: white;
+      }
+      button:active {
+        background-image: url("./assets/button_active.png");
+        color: #ff3aeb;
+      }
+      button:disabled {
+        background-image: url("./assets/button_disabled.png");
+        color: #282856;
+      }
+    </style>
+  </head>
+  <body style="text-align: center; padding: 0; border: 0; margin: 0">
+    <div class="content">
+      <h1>Mages of Biscocta</h1>
+      <h2>Launcher</h2>
+      <p>
+        Welcome to the M.O.B launcher! Below you can find two versions of the
+        game:<br />
+        the <em>Jam</em> version and the superior <em>Live</em> version.
+      </p>
+      <p>
+        The <em>Live</em> version is recommended unless you are trying to rate the game.
+      </p>
+      <button hx-get="./versions/live.html" hx-target="body" style="margin-bottom: 8px;">Live Version</button>
+      <button hx-get="./versions/jam.html" hx-target="body">Jam Version</button>
+    </div>
+  </body>
+</html>
